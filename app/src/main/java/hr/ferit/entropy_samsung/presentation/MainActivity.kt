@@ -129,7 +129,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
             }
         }
     }
-/* Skupljanje podataka vremenski */
+/* Skupljanje podataka vremenski
     override fun onSensorChanged(event: SensorEvent?) {
         event ?: return
 
@@ -140,8 +140,8 @@ class MainActivity : ComponentActivity(), SensorEventListener {
                 Log.d("DATA", "Collected data from sensor type=${event.sensor.type}, values=${event.values.joinToString()} ")
             }
         }
-    }
-/* Skupljanje nakon shakea
+    } */
+/* Skupljanje nakon shakea */
     override fun onSensorChanged(event: SensorEvent?) {
         event ?: return
 
@@ -159,7 +159,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
                 Log.d("DATA", "Collected data from sensor type=${event.sensor.type}, values=${event.values.joinToString()} ")
             }
         }
-    } */
+    }
 
     private fun startCollectionCycle() {
         Log.i("COLLECT", "Starting data collection cycle")
@@ -189,18 +189,20 @@ class MainActivity : ComponentActivity(), SensorEventListener {
             }
         }
     }
-
     private fun processSensorData(): String {
-        Log.d("PROCESS", "Processing collected sensor data")
+
         return synchronized(dataLock) {
-            sensorData.flatMap { (type, values) ->
-                Log.d("PROCESS", "Sensor type=$type, samples=${values.size}")
+            sensorData.flatMap { (_, values) ->
                 values.flatMap { it.map { value ->
-                    ((value * 1e6).toInt() and 0xFF).toString(2).padStart(8, '0')
+                    val intValue = (value * 1e6).toInt()
+                    val bits = intValue and 0b111 // uzmi 3 najniža bita
+                    bits.toString(2).padStart(3, '0')
                 } }
             }.joinToString("")
         }
     }
+
+
 
     private fun generateKeyHash(data: String): String {
         Log.d("HASH", "Generating SHA-256 hash")
@@ -212,7 +214,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
     private fun writeToCsv(data: String, keyHash: String) {
         Log.d("CSV", "Writing result to CSV")
         FileWriter(csvFile, true).use { writer ->
-            writer.append("$entryIndex,${System.currentTimeMillis()},${data.take(64)},$keyHash\n")
+            writer.append("$entryIndex,${System.currentTimeMillis()},${data},$keyHash\n")
             writer.flush()
         }
     }
