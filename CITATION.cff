@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the article below."
+title: "Entropy_samsung: Wear OS application and dataset for smartwatch sensor entropy evaluation"
+type: software
+authors:
+  - family-names: "Švarcmajer"
+    given-names: "Miljenko"
+    orcid: "https://orcid.org/0000-0003-1495-8677"
+    affiliation: "Faculty of Electrical Engineering, Computer Science and Information Technology Osijek"
+repository-code: "https://github.com/msvarcmajer/Entropy_samsung"
+license: Apache-2.0
+keywords:
+  - entropy
+  - smartwatch
+  - wear-os
+  - cryptographic-key-generation
+  - blockchain
+preferred-citation:
+  type: article
+  title: "Entropy Evaluation of Smartwatch Sensors as a Source for Cryptographic Key Generation in Blockchain Applications"
+  authors:
+    - family-names: "Švarcmajer"
+      given-names: "Miljenko"
+      orcid: "https://orcid.org/0000-0003-1495-8677"
+    - family-names: "Köhler"
+      given-names: "Mirko"
+    - family-names: "Krpić"
+      given-names: "Zdravko"
+    - family-names: "Lukić"
+      given-names: "Ivica"
+  journal: "Sensors"
+  volume: 25
+  issue: 17
+  start: 5298
+  year: 2025
+  doi: "10.3390/s25175298"
