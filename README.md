@@ -18,6 +18,12 @@ This repository contains the source code and datasets used in the study
 
 3. The Wear OS application can be compiled in Android Studio (API level 30+) and installed on compatible smartwatches (e.g., Samsung Galaxy Watch 7).
 
-Reference
+### Citation
 If you use this code or dataset, please cite:
-Miljenko Švarcmajer et al., Entropy Evaluation of Smartwatch Sensors as a Source for Cryptographic Key Generation in Blockchain Applications, MDPI Sensors, 2025.
+
+> Švarcmajer, M.; Köhler, M.; Krpić, Z.; Lukić, I. Entropy Evaluation of Smartwatch Sensors as a Source for Cryptographic Key Generation in Blockchain Applications. *Sensors* **2025**, *25*(17), 5298. https://doi.org/10.3390/s25175298
+
+BibTeX and APA formats are available via the **"Cite this repository"** button on the right.
+
+#### Contact
+Using this in your research or a product? I'd be glad to hear about it: miljenko.svarcmajer@ferit.hr
