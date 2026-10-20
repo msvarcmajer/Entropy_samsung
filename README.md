@@ -1,7 +1,7 @@
 # Entropy Evaluation of Samsung Smartwatch Sensors
 
 This repository contains the source code and datasets used in the study  
-*"Entropy Evaluation of Smartwatch Sensors as a Source for Cryptographic Key Generation in Blockchain Applications"* (Miljenko Švarcmajer et al., submitted to MDPI *Sensors*, 2025).
+*"Entropy Evaluation of Smartwatch Sensors as a Source for Cryptographic Key Generation in Blockchain Applications"* (Miljenko Švarcmajer et al., published in MDPI *Sensors*, 2025).
 
 ## Repository Contents
 - `/csv_data/` – Raw sensor data collected in still and shake modes (CSV format).
